@@ -4,7 +4,7 @@ ENV http_proxy="http://free.npp:8080/"
 ENV https_proxy="http://free.npp:8080/"
 
 WORKDIR '/app'
-COPY package.json .
+COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
